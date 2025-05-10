@@ -44,7 +44,7 @@ h1 {
 
 .login-container {
     position: relative;
-    width: 22.2rem;
+    width: 40rem;
 }
 .form-container {
     border: 1px solid hsla(0, 0%, 65%, 0.158);
@@ -118,70 +118,15 @@ h1 {
     -ms-transform: scale(1.02);
     -o-transform: scale(1.02);
 }
-
-.circle {
-    width: 8rem;
-    height: 8rem;
-    background: var(--primary-color);
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    position: absolute;
-}
-
 .illustration {
     position: absolute;
     top: -14%;
     right: -2px;
-    width: 90%;
-}
-
-.circle-one {
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transform: translate(-45%, -45%);
-    -webkit-transform: translate(-45%, -45%);
-    -moz-transform: translate(-45%, -45%);
-    -ms-transform: translate(-45%, -45%);
-    -o-transform: translate(-45%, -45%);
-}
-
-.circle-two {
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-    transform: translate(45%, 45%);
-    -webkit-transform: translate(45%, 45%);
-    -moz-transform: translate(45%, 45%);
-    -ms-transform: translate(45%, 45%);
-    -o-transform: translate(45%, 45%);
-}
-
-.register-forget {
-    margin: 1rem 0;
-    display: flex;
-    justify-content: space-between;
+    width: 80%;
+    opacity: 0.6;
 }
 .opacity {
     opacity: 0.6;
-}
-
-.theme-btn-container {
-    position: absolute;
-    left: 0;
-    bottom: 2rem;
-}
-
-.theme-btn {
-    cursor: pointer;
-    transition: all 0.3s ease-in;
-}
-
-.theme-btn:hover {
-    width: 40px !important;
 }
 
 @keyframes wobble {
