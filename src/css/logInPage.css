@@ -19,11 +19,11 @@ body {
     background: var(--background);
     color: var(--color);
     letter-spacing: 1px;
-    transition: background 0.2s ease;
-    -webkit-transition: background 0.2s ease;
-    -moz-transition: background 0.2s ease;
-    -ms-transition: background 0.2s ease;
-    -o-transition: background 0.2s ease;
+    transition: var(--background) 0.2s ease;
+    -webkit-transition: var(--background) 0.2s ease;
+    -moz-transition: var(--background) 0.2s ease;
+    -ms-transition: var(--background) 0.2s ease;
+    -o-transition: var(--background) 0.2s ease;
 }
 
 a {

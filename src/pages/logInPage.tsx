@@ -21,9 +21,7 @@ function LogInPage() {
             </Link>
           </form>
         </div>
-        <div className="circle circle-two"></div>
       </div>
-      <div className="theme-btn-container"></div>
     </section>
   );
 }
