@@ -1,5 +1,5 @@
 import MovieCard from "../components/MovieCard";
-import { searchMovie, getPopularMovies } from "../services/API";
+import { searchMovie, getPopularMovies } from "../services/Api";
 import { useState, useEffect } from "react";
 import "../css/Home.css";
 import { Typography } from "@mui/material";
