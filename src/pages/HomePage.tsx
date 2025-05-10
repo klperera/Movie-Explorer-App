@@ -2,12 +2,14 @@ import MovieCard from "../components/MovieCard";
 import { searchMovie, getPopularMovies } from "../services/API";
 import { useState, useEffect } from "react";
 import "../css/Home.css";
+import { Typography } from "@mui/material";
 
 function HomePage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
+  const [isSearch, setIsSearch] = useState(false);
 
   useEffect(() => {
     const loadPopularMovies = async () => {
@@ -36,6 +38,7 @@ function HomePage() {
     try {
       const searchMovies = await searchMovie(searchQuery);
       setMovies(searchMovies);
+      setIsSearch(true);
       setError("");
     } catch (err) {
       console.log(err);
@@ -60,9 +63,17 @@ function HomePage() {
             Search
           </button>
         </form>
+        {!isSearch && (
+          <Typography variant="h1" sx={{ m: 3 }}>
+            Popular Movies
+          </Typography>
+        )}
+
         {error && <div className="error-message">{error}</div>}
         {loading ? (
-          <div className="loading">Loading...</div>
+          <Typography variant="h2" sx={{ textAlign: "center", mt: 5 }}>
+            <b>Loading...</b>
+          </Typography>
         ) : (
           <div className="movies-grid">
             {movies.map((movie) => (
