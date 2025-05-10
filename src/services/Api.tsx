@@ -14,7 +14,7 @@ export const getPopularMovies = async () => {
 
 export const searchMovie = async (searchQuery: string) => {
   const response = await themoviedb.get(
-    `1/search/movie?query=${searchQuery}&include_adult=true&language=en-US`
+    `/search/movie?query=${searchQuery}&include_adult=true&language=en-US`
   );
   return await response.data.results;
 };

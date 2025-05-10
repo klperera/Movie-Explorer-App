@@ -24,26 +24,25 @@ function HomePage() {
     loadPopularMovies();
   }, []);
 
-  //   useEffect(() => {
-  //     const loadSearchedMovies = async () => {
-  //       setLoading(true);
-  //       try {
-  //         const searchMovies = await searchMovie(searchQuery);
-  //         setMovies(searchMovies);
-  //       } catch (err) {
-  //         console.log(err);
-  //         setError("Error in fetching searched movies");
-  //       } finally {
-  //         setLoading(false);
-  //       }
-  //     };
-  //     loadSearchedMovies();
-  //   }, []);
-
-  const handelSearch = (event: any) => {
+  const handelSearch = async (event: any) => {
     event.preventDefault();
+    if (!searchQuery.trim()) {
+      return;
+    }
     console.log("searching for", searchQuery);
-    setLoading(true);
+    {
+      loading ? null : setLoading(true);
+    }
+    try {
+      const searchMovies = await searchMovie(searchQuery);
+      setMovies(searchMovies);
+      setError("");
+    } catch (err) {
+      console.log(err);
+      setError("Error in fetching searched movies");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
