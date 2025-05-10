@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../css/LogInPage.css";
+import "../css/logInPage.css";
 import { Box, Button, TextField } from "@mui/material";
 
 function LogInPage() {
