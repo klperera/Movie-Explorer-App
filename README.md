@@ -1,54 +1,49 @@
-# React + TypeScript + Vite
+# 🎬 Movie Explorer App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek and modern React application built with **Vite** that allows users to explore popular movies using **The Movie Database (TMDb) API**.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Check out the deployed version of the app here:  
+👉 [Movie Explorer App](https://movie-explorer-app-rho.vercel.app/)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 🔍 Browse popular movies fetched from TMDb API.
+- 📅 View release date and poster of each movie.
+- ❤️ Favorite button to mark preferred movies (UI-level). - still ongoing
+- 🔄 Responsive and fast UI using React with Vite.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Project Setup
+
+Make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (v16 or higher recommended)
+- A TMDb API key from [themoviedb.org](https://www.themoviedb.org/)
+
+### 1. Clone the Repository
+
+Go to TMDB and sign up or log in.
+
+Apply for a free API key.
+
+Create a .env file in the root of the project
+
+- VITE_API_KEY=your_tmdb_api_key_here
+
+```bash
+git clone https://github.com/klperera/Movie-Explorer-App
+cd movie-explorer-app
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## ⚡ About This Submission
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+This project was assigned with a **72-hour deadline**.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- 🗓️ **Day 1**: I had my **final university exam** and couldn't start the project.
+- 🗓️ **Day 2**: As someone **completely new to React and MUI**, I dedicated the entire day to **learning** and understanding both technologies from scratch.
+- 🗓️ **Day 3**: I began **implementing** the project with the knowledge I had just acquired.
+
+Although the project is **incomplete**, this experience clearly reflects my ability to **learn fast**, adapt to new tools under pressure, and apply them in real-time.
